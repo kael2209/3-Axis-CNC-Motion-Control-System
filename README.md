@@ -16,14 +16,14 @@
 ### 🛠️ Hardware
 
 <p align="center">
-  <img src="./Images/1.jpg" alt="Servo" width="120" height="160" style="margin-right:15px;"/>
-  <img src="./Images/2.jpg" alt="Axis" width="120" height="160" style="margin-right:15px;"/>
-  <img src="./Images/3.jpg" alt="Pen" width="120" height="160"/>
+  <img src="./Images/1.jpg" alt="Servo" width="280" height="360" style="margin-right:15px;"/>
+  <img src="./Images/2.jpg" alt="Axis" width="280" height="360" style="margin-right:15px;"/>
+  <img src="./Images/3.jpg" alt="Pen" width="280" height="360"/>
 </p>
 <p align="center">
-  <img src="./Images/4.jpg" alt="Axis" width="120" height="160" style="margin-right:15px;"/>
-  <img src="./Images/Circuit.jpg" alt="Circuit" width="120" height="160" style="margin-right:15px;"/>
-  <img src="./Images/EtherCAT.png" alt="EtherCAT" width="120" height="160"/>
+  <img src="./Images/4.jpg" alt="Axis" width="280" height="360" style="margin-right:15px;"/>
+  <img src="./Images/Circuit.jpg" alt="Circuit" width="280" height="360" style="margin-right:15px;"/>
+  <img src="./Images/EtherCAT.png" alt="EtherCAT" width="280" height="360"/>
 </p>
 
 <p align="center"><em>3-Axis Motion Control System</em></p>
@@ -49,7 +49,13 @@ Key achievements include:
 
 👉 [Watch the demo video on TikTok](https://www.tiktok.com/@kshelbyiot/video/7531961342513712391?is_from_webapp=1&sender_device=pc&web_id=7500959777037518344)
 
-[![Watch Demo Video](./Images/Coverr.png)](https://www.tiktok.com/@kshelbyiot/video/7531961342513712391?is_from_webapp=1&sender_device=pc&web_id=7500959777037518344)
+<p align="center">
+  <a href="https://www.tiktok.com/@kshelbyiot/video/7531961342513712391?is_from_webapp=1&sender_device=pc&web_id=7500959777037518344">
+    <img src="./Images/Coverr.png" alt="Watch Demo Video" width="300"/>
+  </a>
+</p>
+
+
 
 <p align="center"><em>Video: 3-Axis CNC Motion Control System</em></p>
 
