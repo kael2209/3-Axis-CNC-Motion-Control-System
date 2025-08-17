@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="FB_PowerAll" Id="{4672062b-df79-401e-acd5-592ed98d018d}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_PowerAll
+VAR_INPUT
+	bEnable: BOOL;
+END_VAR
+VAR_OUTPUT
+	bStatus:BOOL;
+	bError :BOOL;
+END_VAR
+VAR_IN_OUT
+	stAxRefAxX:AXIS_REF;
+	stAxRefAyY:AXIS_REF;	
+END_VAR
+VAR
+	fbPower1:MC_Power;
+	fbPower2:MC_Power;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// power all axis//
+fbPower1(
+	Axis:=stAxRefAxX , 
+	Enable:=bEnable , 
+	Enable_Positive:= TRUE, 
+	Enable_Negative:=TRUE , 
+	Override:=100 , 
+	BufferMode:= , 
+	Options:= , 
+	Status=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );
+	
+fbPower2(
+	Axis:=stAxRefAyY , 
+	Enable:=bEnable , 
+	Enable_Positive:= TRUE, 
+	Enable_Negative:=TRUE , 
+	Override:=100 , 
+	BufferMode:= , 
+	Options:= , 
+	Status=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );
+	
+	
+bStatus :=fbPower1.Status AND fbPower2.Status;
+bError  :=fbPower1.Status OR  fbPower2.Status;]]></ST>
+    </Implementation>
+    <LineIds Name="FB_PowerAll">
+      <LineId Id="9" Count="0" />
+      <LineId Id="28" Count="10" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="43" Count="10" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="55" Count="3" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

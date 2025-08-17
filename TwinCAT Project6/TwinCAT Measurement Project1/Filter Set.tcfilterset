@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FilterDesignerFilterSet AssemblyName="TwinCAT.Measurement.FilterDesigner">
+  <CursorVisibility>None</CursorVisibility>
+  <Precision>FixedPoint32Bit</Precision>
+  <FilterName>Butterworth</FilterName>
+  <FilterType>LowPass</FilterType>
+  <Order>2</Order>
+  <SampleRate>10000</SampleRate>
+  <CutOff>250</CutOff>
+  <Bandwidth>100</Bandwidth>
+  <PassBandRipple>0.1</PassBandRipple>
+  <EnablePLCOptions>false</EnablePLCOptions>
+  <Oversamples>1</Oversamples>
+  <Channels>1</Channels>
+  <ImpulseResponse>IIR</ImpulseResponse>
+  <MagnitudeMode>normalized</MagnitudeMode>
+  <SupportPoints>512</SupportPoints>
+  <LineColor>Blue</LineColor>
+  <LineWidth>1</LineWidth>
+  <Marks>false</Marks>
+  <Title>Filter Set</Title>
+  <Comment>TEMPLATE</Comment>
+  <DisplayColor>Blue</DisplayColor>
+  <IsFileBased>true</IsFileBased>
+  <Suffix>.tcfilterset</Suffix>
+</FilterDesignerFilterSet>

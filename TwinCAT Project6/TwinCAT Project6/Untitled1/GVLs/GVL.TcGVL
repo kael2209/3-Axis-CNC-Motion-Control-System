@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <GVL Name="GVL" Id="{ed44e3f1-d03a-424c-9e25-0bcac9649f4c}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	
+	BT_Z_AXIS_UP AT %I*:BOOL;
+	BT_Z_AXIS_DOWN AT %I*:BOOL;
+	SENSOR_Z_AXIS_UP AT %I*:BOOL;
+	SENSOR_Z_AXIS_DOWN AT %I*:BOOL;
+	Z_AXIS_UP AT %Q*:BOOL;
+	Z_AXIS_DOWN AT %Q*:BOOL;
+	
+	BT_X_AXIS_FRONT AT %I*:BOOL;
+	BT_X_AXIS_BACK AT %I*:BOOL;
+	BT_Y_AXIS_FRONT AT %I*:BOOL;
+	BT_Y_AXIS_BACK AT %I*:BOOL;
+	
+	X_Position:DINT;
+	Y_Position:DINT;
+	XY_Velocity: DINT;
+	
+	X_Current:LREAL;
+	Y_Current:LREAL;
+	X_Current_INT:DINT;
+	Y_Current_INT:DINT;
+
+	Axis_X : AXIS_REF;
+	
+	X_AxisPower : MC_Power;
+	X_AxisReset : MC_Reset;
+	X_AxisJog   : MC_Jog;
+	X_AxisHome   : MC_Home;
+	X_Axis_MovVel1  : MC_MoveVelocity;
+	X_Axis_MovVel2  : MC_MoveVelocity;
+	X_Axis_MovRel1  : MC_MoveRelative;
+	X_Axis_MovRel2  : MC_MoveRelative;
+	X_Axis_MovAbs1  : MC_MoveAbsolute;
+	X_Axis_MovAbs2  : MC_MoveAbsolute;
+	
+	X_Axis_Halt     : MC_Halt;
+	X_Axis_Stop     : MC_Stop;
+	
+	X_Read_Pos     : MC_ReadActualPosition;
+	Y_Read_Pos     : MC_ReadActualPosition;
+	
+	// Input command
+	X_ResetExe : BOOL;
+	
+	X_PowerEnable          : BOOL;
+	X_PowerEnPositive      : BOOL;
+	X_PowerEnNegative      : BOOL;
+	
+	X_HomeExe              : BOOL;
+	X_HomeCamInput 		   : BOOL;
+	
+	X_JogForward   		   :BOOL;
+	X_JogRevise            :BOOL;
+	
+	X_HaltExe            :BOOL;
+	X_StopExe            :BOOL;
+	
+	X_ST_VelCmd1  : MC_CMD;
+	X_ST_VelCmd2  : MC_CMD;
+	X_ST_RelCmd1  : MC_CMD;
+	X_ST_RelCmd2  : MC_CMD;
+	X_ST_AbsCmd1  : MC_CMD;
+	X_ST_AbsCmd2  : MC_CMD;
+	//
+	X_ST_RealPos  :MC_Status;
+	Y_ST_RealPos  :MC_Status;
+	
+	
+	X_PowerOverride:  LREAL;
+	X_HomePosition:  LREAL;
+	X_SetPosition:  LREAL;
+	X_JogVelocity:  LREAL;
+	
+	// Status
+	X_ST_Reset           : MC_Status;
+	X_ST_Power           : MC_Status;
+	X_ST_Home            : MC_Status;
+	X_ST_SetPosition     : MC_Status;
+	X_ST_Jog             : MC_Status;
+	
+	X_ST_VelSts1    : MC_Status;
+	X_ST_VelSts2    : MC_Status;
+	X_ST_RelSts1    : MC_Status;
+	X_ST_RelSts2    : MC_Status;
+	X_ST_AbsSts1    : MC_Status;
+	X_ST_AbsSts2    : MC_Status;
+	
+	X_ST_Halt          	:MC_Status;
+	X_ST_Stop			:MC_Status;
+	
+	Axis_Y : AXIS_REF;
+	
+	Y_AxisPower : MC_Power;
+	Y_AxisReset : MC_Reset;
+	Y_AxisJog   : MC_Jog;
+	Y_AxisHome   : MC_Home;
+	Y_Axis_MovVel1  : MC_MoveVelocity;
+	Y_Axis_MovVel2  : MC_MoveVelocity;
+	Y_Axis_MovRel1  : MC_MoveRelative;
+	Y_Axis_MovRel2  : MC_MoveRelative;
+	Y_Axis_MovAbs1  : MC_MoveAbsolute;
+	Y_Axis_MovAbs2  : MC_MoveAbsolute;
+	
+	Y_Axis_Halt     : MC_Halt;
+	Y_Axis_Stop     : MC_Stop;
+	
+	// Input command
+	Y_ResetExe : BOOL;
+	
+	Y_PowerEnable          : BOOL;
+	Y_PowerEnPositive      : BOOL;
+	Y_PowerEnNegative      : BOOL;
+	
+	Y_HomeExe              : BOOL;
+	Y_HomeCamInput 		   : BOOL;
+	
+	Y_JogForward   		   :BOOL;
+	Y_JogRevise            :BOOL;
+	
+	Y_HaltExe            :BOOL;
+	Y_StopExe            :BOOL;
+	
+	Y_ST_VelCmd1  : MC_CMD;
+	Y_ST_VelCmd2  : MC_CMD;
+	Y_ST_RelCmd1  : MC_CMD;
+	Y_ST_RelCmd2  : MC_CMD;
+	Y_ST_AbsCmd1  : MC_CMD;
+	Y_ST_AbsCmd2  : MC_CMD;
+	
+	
+	Y_PowerOverride:  LREAL;
+	Y_HomePosition:  LREAL;
+	Y_SetPosition:  LREAL;
+	Y_JogVelocity:  LREAL;
+	
+	// Status
+	Y_ST_Reset           : MC_Status;
+	Y_ST_Power           : MC_Status;
+	Y_ST_Home            : MC_Status;
+	Y_ST_SetPosition     : MC_Status;
+	Y_ST_Jog             : MC_Status;
+	
+	Y_ST_VelSts1    : MC_Status;
+	Y_ST_VelSts2    : MC_Status;
+	Y_ST_RelSts1    : MC_Status;
+	Y_ST_RelSts2    : MC_Status;
+	Y_ST_AbsSts1    : MC_Status;
+	Y_ST_AbsSts2    : MC_Status;
+	
+	Y_ST_Halt          	:MC_Status;
+	Y_ST_Stop			:MC_Status;
+
+	LOAD_PROGRAM : BOOL;
+	RUN          : BOOL;
+	
+END_VAR
+]]></Declaration>
+  </GVL>
+</TcPlcObject>

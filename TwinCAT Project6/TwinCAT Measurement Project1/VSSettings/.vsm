@@ -1,0 +1,27 @@
+<Node>
+  <Title>TwinCAT Measurement Project1</Title>
+  <Expanded>False</Expanded>
+  <FileName></FileName>
+  <Children>
+    <Node>
+      <Title>Filter Designer Project</Title>
+      <Expanded>True</Expanded>
+      <FileName>C:\Users\Acer\Documents\TcXaeShell\TwinCAT Project6\TwinCAT Measurement Project1\Filter Designer Project.tcfilterproj</FileName>
+      <Children>
+        <Node>
+          <Title>Filter Plot</Title>
+          <Expanded>True</Expanded>
+          <FileName></FileName>
+          <Children>
+            <Node>
+              <Title>Filter Set</Title>
+              <Expanded>False</Expanded>
+              <FileName></FileName>
+              <Children />
+            </Node>
+          </Children>
+        </Node>
+      </Children>
+    </Node>
+  </Children>
+</Node>

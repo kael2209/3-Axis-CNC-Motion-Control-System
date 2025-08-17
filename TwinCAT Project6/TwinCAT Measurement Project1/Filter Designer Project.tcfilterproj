@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FilterDesignerProject AssemblyName="TwinCAT.Measurement.FilterDesigner">
+  <LayoutString />
+  <Version>1.0.0.0</Version>
+  <SubMember>
+    <FilterDesignerPlot AssemblyName="TwinCAT.Measurement.FilterDesigner">
+      <MagnitudeMode>normalized</MagnitudeMode>
+      <SubMember>
+        <FilterDesignerFilterSet AssemblyName="TwinCAT.Measurement.FilterDesigner">
+          <FilePath>Filter Set.tcfilterset</FilePath>
+        </FilterDesignerFilterSet>
+      </SubMember>
+      <Title>Filter Plot</Title>
+      <DisplayColor>Black</DisplayColor>
+      <IsFileBased>false</IsFileBased>
+      <FilePath></FilePath>
+      <Suffix>.tcfilterplot</Suffix>
+      <ProjectState>0</ProjectState>
+    </FilterDesignerPlot>
+  </SubMember>
+  <Title>Filter Designer Project</Title>
+  <Comment>TEMPLATE</Comment>
+  <DisplayColor>Black</DisplayColor>
+  <IsFileBased>true</IsFileBased>
+  <Suffix>.tcfilterproj</Suffix>
+  <ProjectState>0</ProjectState>
+</FilterDesignerProject>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="FB_NCI" Id="{e34c1b08-fd2f-4820-b6f6-8e39d0262fa7}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_NCI
+VAR_INPUT
+	sProgramName: STRING;
+END_VAR
+VAR_IN_OUT
+	stChannelInput : NCTOPLC_NCICHANNEL_REF;
+	stChannelOutput: PLCTONC_NCICHANNEL_REF;
+	
+	stAxRefAxX:AXIS_REF;
+	stAxRefAyY:AXIS_REF;
+END_VAR
+VAR
+	fbpowerAll   : FB_PowerAll;
+	fOverride    :LREAL :=100;
+	fbcfgbuildExtgroup : CfgbuildExt3Dgroup;
+	fbItpResetEx2      : ItpResetEx2;
+	fbItpLoadProgEx    : ItpLoadProgEx;
+	fbReconfig         : CfgReconfigGroup;
+	fbItpStartStopEx   : ItpStartStopEx;
+	
+	ItpErrId: UDINT;
+	ItpState: UDINT;
+	ItpStateErr: BOOL;
+	ItpStateIdle: BOOL;
+	ItpStateReady: BOOL;
+	ItpStateRunning: BOOL;
+	ItpStateAborted: BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+
+fbpowerAll(
+	bEnable:=GVL.X_PowerEnable , 
+	bStatus=> , 
+	bError=> , 
+	stAxRefAxX:= stAxRefAxX, 
+	stAxRefAyY:= stAxRefAyY);
+	
+	ItpSetOverridePercent(fOverridePercent:= fOverride, sPlcToNci:=stChannelOutput);
+fbcfgbuildExtgroup(
+	bExecute:= GVL.X_PowerEnable, //fbcfgbuildExtgroup.bExecute, 
+	nGroupId:= stChannelInput.GrpId, 
+	nXAxisId:= stAxRefAxX.NcToPlc.AxisId, 
+	nYAxisId:= stAxRefAyY.NcToPlc.AxisId,
+	nZAxisId:= , 
+	nQ1AxisId:= , 
+	nQ2AxisId:= , 
+	nQ3AxisId:= , 
+	nQ4AxisId:= , 
+	nQ5AxisId:= , 
+	tTimeOut:= fbcfgbuildExtgroup.tTimeOut, 
+	bBusy=> , 
+	bErr=> , 
+	nErrId=> );
+	
+fbItpResetEx2(
+	bExecute:= fbItpResetEx2.bExecute, 
+	tTimeOut:= fbItpResetEx2.tTimeOut, 
+	sNciToPlc:= stChannelInput, 
+	bBusy=> , 
+	bErr=> , 
+	nErrId=> );
+	
+fbItpLoadProgEx(
+	sNciToPlc:= stChannelInput , 
+	bExecute:= GVL.LOAD_PROGRAM,//fbItpLoadProgEx.bExecute, 
+	sPrg:= sProgramName, 
+	nLength:= LEN(sProgramName), 
+	tTimeOut:= fbItpLoadProgEx.tTimeOut, 
+	bBusy=> , 
+	bErr=> , 
+	nErrId=> );
+	
+	ItpState := stChannelInput.ItpState;
+	ItpStateReady := ItpState = NCI_INTERPRETER_READY;
+	
+fbItpStartStopEx(
+	bStart:=GVL.RUN,//fbItpStartStopEx.bStart , 
+	bStop:= fbItpStartStopEx.bStop, 
+	tTimeOut:=fbItpStartStopEx.tTimeout , 
+	sNciToPlc:= stChannelInput, 
+	bBusy=> , 
+	bErr=> , 
+	nErrId=> );
+
+fbReconfig(
+	bExecute:=fbReconfig.bExecute , 
+	nGroupId:= stChannelInput.GrpId, 
+	tTimeOut:= , 
+	bBusy=> , 
+	bErr=> , 
+	nErrId=> );
+	]]></ST>
+    </Implementation>
+    <LineIds Name="FB_NCI">
+      <LineId Id="52" Count="6" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="61" Count="1" />
+      <LineId Id="64" Count="13" />
+      <LineId Id="63" Count="0" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="82" Count="5" />
+      <LineId Id="81" Count="0" />
+      <LineId Id="89" Count="0" />
+      <LineId Id="91" Count="7" />
+      <LineId Id="90" Count="0" />
+      <LineId Id="102" Count="3" />
+      <LineId Id="107" Count="6" />
+      <LineId Id="106" Count="0" />
+      <LineId Id="115" Count="6" />
+      <LineId Id="114" Count="0" />
+      <LineId Id="60" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

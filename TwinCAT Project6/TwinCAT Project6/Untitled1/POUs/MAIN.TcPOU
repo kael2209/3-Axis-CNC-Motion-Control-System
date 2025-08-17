@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="MAIN" Id="{71784bf4-c468-4ab3-a04c-eac2f366ca9b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	fbnci :FB_NCI;
+	
+	stChannelInput  AT %I*: NCTOPLC_NCICHANNEL_REF;
+	stChannelOutput AT %Q*: PLCTONC_NCICHANNEL_REF;
+
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+X_Axis();
+Y_Axis();
+Z_Axis();
+PANEL();
+
+fbnci(
+	sProgramName:='mdi_2.nc' , 
+	stChannelInput:=stChannelInput , 
+	stChannelOutput:=stChannelOutput , 
+	stAxRefAxX:=gvl.Axis_X , 
+	stAxRefAyY:=gvl.Axis_Y );]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="98" Count="0" />
+      <LineId Id="69" Count="0" />
+      <LineId Id="99" Count="0" />
+      <LineId Id="104" Count="0" />
+      <LineId Id="109" Count="0" />
+      <LineId Id="120" Count="5" />
+      <LineId Id="119" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

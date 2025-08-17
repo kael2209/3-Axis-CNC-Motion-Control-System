@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{677e25d5-7ee5-4e4d-b4c0-b64f9f051ebe}</ProjectGuid>
+    <AssemblyName>TwinCAT Measurement Project1</AssemblyName>
+    <Name>TwinCAT Measurement Project1</Name>
+    <RootNamespace>TwinCAT Measurement Project1</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Filter Designer Project.tcfilterproj">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>
