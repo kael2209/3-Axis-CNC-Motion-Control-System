@@ -16,14 +16,14 @@
 ### 🛠️ Hardware
 
 <p align="center">
-  <img src="./Images/1.jpg" alt="Servo" width="280" height="360" style="margin-right:15px;"/>
-  <img src="./Images/2.jpg" alt="Axis" width="280" height="360" style="margin-right:15px;"/>
-  <img src="./Images/3.jpg" alt="Pen" width="280" height="360"/>
+  <img src="./Images/1.jpg" alt="Servo" width="220" height="320" style="margin-right:15px;"/>
+  <img src="./Images/2.jpg" alt="Axis" width="220" height="320" style="margin-right:15px;"/>
+  <img src="./Images/3.jpg" alt="Pen" width="220" height="320"/>
 </p>
 <p align="center">
-  <img src="./Images/4.jpg" alt="Axis" width="280" height="360" style="margin-right:15px;"/>
-  <img src="./Images/Circuit.jpg" alt="Circuit" width="280" height="360" style="margin-right:15px;"/>
-  <img src="./Images/EtherCAT.png" alt="EtherCAT" width="280" height="360"/>
+  <img src="./Images/4.jpg" alt="Axis" width="220" height="320" style="margin-right:15px;"/>
+  <img src="./Images/Circuit.jpg" alt="Circuit" width="220" height="320" style="margin-right:15px;"/>
+  <img src="./Images/EtherCAT.png" alt="EtherCAT" width="220" height="320"/>
 </p>
 
 <p align="center"><em>3-Axis Motion Control System</em></p>
